@@ -5,7 +5,7 @@ export default function Post(props) {
     if (!props) {
        return (<div>Poo</div>)
     }
-    console.log(props.post.author, "author")
+    console.log(props, "author")
         return (
     <div className='post'>
       <div className='post-header'>

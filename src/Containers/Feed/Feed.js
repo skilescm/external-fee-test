@@ -5,7 +5,7 @@ export default function Feed(props) {
   console.log(props, "feed props")
   return (
     <div className='feed'>
-      {props.feedData?.map((post, index) => (
+      {props.displayFeedData?.map((post, index) => (
         <Post key={index} post={post}/>
       ))}
       
