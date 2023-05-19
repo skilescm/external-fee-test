@@ -9,13 +9,12 @@ export default function Search(props) {
   }
 
   return (
-    <div>
+    <div className='searchbar'>
       <input
       className='search-input'
       placeholder='Search'
       onChange={searchTextChange}      
       />
-      <button className='clear-search-btn' />
     </div>
   )
 }

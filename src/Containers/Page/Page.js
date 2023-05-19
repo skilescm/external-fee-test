@@ -26,12 +26,10 @@ export default function Page(props) {
   },[])
 
   const handleSearchEntry = (searchValue) => {
-    console.log(searchValue,"The search has been input")
     if (searchValue.length > 0) {
       let searchResult = feedData.filter(
         (post) => 
-          (console.log(searchValue.toLowerCase(), "filtering post"),
-          post.author.displayName.toLowerCase().includes(searchValue.toLowerCase())) ||
+          (post.author.displayName.toLowerCase().includes(searchValue.toLowerCase())) ||
           (post.text.toLowerCase().includes(searchValue.toLowerCase()))
         
       )

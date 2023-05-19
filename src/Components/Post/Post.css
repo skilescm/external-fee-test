@@ -1,0 +1,22 @@
+.post {
+    display: flex;
+    flex-direction:column;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 75vw;
+    margin: 15px;
+}
+
+.post-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: space-around;
+
+}
+
+.post-profile-picture {
+    height: 50px;
+    border-radius: 50%;
+}
