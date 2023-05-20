@@ -1,3 +1,3 @@
-import { getFeed } from './Endpoints/feedEndpoint';
+import { getFeed, searchFeed } from './Endpoints/feedEndpoint';
 
-export default { getFeed };
+export default { getFeed, searchFeed };

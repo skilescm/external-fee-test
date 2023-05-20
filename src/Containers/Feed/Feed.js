@@ -1,4 +1,5 @@
 import React from 'react'
+import './Feed.css'
 import Post from '../../Components/Post/Post'
 
 export default function Feed(props) {

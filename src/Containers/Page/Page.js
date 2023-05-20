@@ -1,4 +1,5 @@
 import React from 'react'
+import './Page.css'
 import { useEffect, useState } from 'react'
 import Search from '../../Components/Search/Search'
 import Feed from '../Feed/Feed'
@@ -10,8 +11,9 @@ export default function Page(props) {
   
   const [isError,setIsError] = useState(false)
   const [feedData,setFeedData] = useState([])
-  const [filteredFeedData,setFilteredFeedData] = useState([])
   const [displayFeedData,setDisplayFeedData] = useState([])
+
+  //initial feed load from endpoint
   useEffect(() => {
     clientApi.getFeed()
     .then(response => {
@@ -25,15 +27,18 @@ export default function Page(props) {
     })
   },[])
 
+  //use the search endpoint to query database for user input
   const handleSearchEntry = (searchValue) => {
     if (searchValue.length > 0) {
-      let searchResult = feedData.filter(
-        (post) => 
-          (post.author.displayName.toLowerCase().includes(searchValue.toLowerCase())) ||
-          (post.text.toLowerCase().includes(searchValue.toLowerCase()))
-        
-      )
-      setDisplayFeedData(searchResult)
+      clientApi.searchFeed(searchValue)
+      .then(response => {
+        if (response.status === 200) {
+          console.log(response, "search response");
+          setDisplayFeedData(response.data)
+        } else {
+          setIsError(true);
+        }
+      })
     } else {
       setDisplayFeedData(feedData)
     }
