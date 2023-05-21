@@ -4,10 +4,10 @@ import { ThumbsUpIcon } from '../Icons/thumb_up'
 
 export default function Post(props) {
   
+  //check to make sure props contain post data
     if (!props.post) {
        return (<div>Something Went Wrong</div>)
     }
-    console.log(props, "author")
         return (
     <div className='post'>
       <div className='post-header'>

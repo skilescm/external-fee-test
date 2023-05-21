@@ -6,8 +6,7 @@ import Feed from '../Feed/Feed'
 import clientApi from '../../Lib/clientApi'
 
 export default function Page(props) {
-  console.log(props, "page props")
-
+//page container to house full page views, can be used later to expand functionality of app to have multiple pages of content
   
   const [isError,setIsError] = useState(false)
   const [feedData,setFeedData] = useState([])

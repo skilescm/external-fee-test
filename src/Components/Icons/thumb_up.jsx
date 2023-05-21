@@ -1,6 +1,6 @@
 export const ThumbsUpIcon = () => {
 
-	//SVG asset that can be programmatically manipulated/animated
+	//SVG asset that can be programmatically manipulated/animated, to be used in future expansion of app
 
 	const styles = {
 		main: {

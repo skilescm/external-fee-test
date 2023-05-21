@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+//endpoints used when interacting with feed api
 
 export const getFeed = async () => {
     let url = "//localhost:3000/feed";
