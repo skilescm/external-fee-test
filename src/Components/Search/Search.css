@@ -13,5 +13,7 @@
 
 .search-input {
     height: 2em;
-    width: 300px;
+    width: 30vw;
+    border-radius: 15px;
+    text-indent: 20px;
 }
