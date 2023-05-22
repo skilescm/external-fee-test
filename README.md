@@ -7,7 +7,9 @@ An SVG asset is in the Components -> Icons folder. It was set as a component to 
 
 I have built this application in a manner that it can support future additions and expansions. Having a future proof architecture is very important to me.
 
-## To un The Project
+## To Run The Project
+
+First, clone this repository and run `npm install` to install all package dependencies.
 
 In the project directory, you can run:
 
